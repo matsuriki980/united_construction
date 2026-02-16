@@ -4,3 +4,118 @@
 page > top > top-kv
 ------------------------------
 */
+.top-kv {
+  display: flex;
+  align-items: flex-end;
+  background-image: url(/img/top/top-kv-sp.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 542rem;
+  position: relative;
+
+  @include g.mq() {
+    background-image: url(/img/top/top-kv.jpg);
+    height: 769rem;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(20, 78, 148, 0.15);
+  }
+}
+
+.top-kv-text {
+  display: flex;
+  flex-direction: column;
+  gap: 21rem;
+  color: var(--color-white);
+  position: relative;
+  z-index: 1;
+  padding-bottom: 47rem;
+
+  @include g.mq() {
+    gap: 54rem;
+    padding-bottom: 191rem;
+  }
+}
+
+.top-kv-text-en {
+  font-family: var(--font-family-en);
+  font-weight: 500;
+  line-height: 1.05;
+  font-size: 43rem;
+  text-shadow: 0 3rem 7rem rgba(0, 0, 0, 0.0588);
+
+  @include g.mq() {
+    font-size: 101rem;
+  }
+
+  span {
+    display: block;
+    letter-spacing: 0.025em;
+    white-space: wrap;
+  }
+}
+
+.top-kv-text-ja {
+  font-size: 18rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+
+  @include g.mq() {
+    font-size: 22rem;
+  }
+}
+
+.top-kv-scroll {
+  display: none;
+
+  @include g.mq() {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    gap: 6rem;
+    background-color: var(--color-white);
+    padding: 49rem 22rem 32rem 36rem;
+    border-radius: 39rem 0 0 0;
+
+    &::before {
+      content: "";
+      display: block;
+      background-image: url(/img/top/curve.svg);
+      background-size: cover;
+      background-position: center;
+      width: 46rem;
+      aspect-ratio: 1/1;
+      position: absolute;
+      bottom: 0;
+      left: -46rem;
+    }
+  }
+}
+
+.top-kv-scroll-hint {
+  @include g.mq() {
+    width: 4rem;
+  }
+}
+
+.top-kv-scroll-text {
+  @include g.mq() {
+    font-family: var(--font-family-en);
+    font-weight: 500;
+    color: var(--color-primary);
+    writing-mode: vertical-rl;
+  }
+}

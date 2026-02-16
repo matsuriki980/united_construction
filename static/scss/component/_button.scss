@@ -21,6 +21,7 @@ component > button
     gap: 24rem;
   }
 
+  &::before,
   &::after {
     --size: 47rem;
     --dot-size: 5rem;
@@ -37,6 +38,35 @@ component > button
       --size: 58rem;
       --dot-size: 6rem;
     }
+  }
+
+  &::before {
+    display: none;
+  }
+
+  &--back {
+    &::before {
+      display: block;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      &::before,
+      &::after {
+        scale: 1.1;
+      }
+    }
+  }
+}
+
+.c-button--back {
+  &::after {
+    display: none;
   }
 }
 

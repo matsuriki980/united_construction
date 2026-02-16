@@ -4,3 +4,16 @@
 page > news > news-archive
 ------------------------------
 */
+.news-archive {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40rem;
+}
+
+.news-archive-list {
+  margin-top: -16rem;
+
+  @include g.mq() {
+    margin-top: -24rem;
+  }
+}

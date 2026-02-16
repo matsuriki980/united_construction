@@ -1,0 +1,46 @@
+@use "../../global" as g;
+
+/*!
+page > news > news-detail
+------------------------------
+*/
+
+.news-detail-info {
+  display: flex;
+  align-items: center;
+  gap: 12rem;
+}
+
+.news-detail-title {
+  font-size: 20rem;
+  margin-top: 8rem;
+  line-height: 1;
+
+  @include g.mq() {
+    font-size: 24rem;
+  }
+}
+
+.news-detail-text-wrap {
+  margin-top: 40rem;
+}
+
+.news-detail-text {
+  @include g.mq() {
+    font-size: 16rem;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 16px;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.news-detail-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 40rem;
+}

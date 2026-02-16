@@ -4,3 +4,63 @@
 page > contact > contact-form
 ------------------------------
 */
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24rem;
+
+  @include g.mq() {
+    gap: 32rem;
+    grid-template-columns: auto 1fr;
+  }
+}
+
+.contact-form-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6rem;
+
+  @include g.mq() {
+    grid-template-columns: subgrid;
+    grid-column: 1/-1;
+    align-items: start;
+    gap: 64rem;
+  }
+}
+
+.contact-form-item--submit {
+  gap: 16rem;
+  grid-template-columns: 1fr;
+}
+
+.contact-form-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include g.mq() {
+    justify-content: flex-start;
+    gap: 8rem;
+    margin-top: 14rem;
+  }
+}
+
+.contact-form-consent {
+  text-align: center;
+  font-size: 14rem;
+
+  a {
+    text-decoration: underline;
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.contact-form-button {
+  display: flex;
+  justify-content: center;
+}

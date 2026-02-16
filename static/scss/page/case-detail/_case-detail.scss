@@ -1,0 +1,72 @@
+@use "../../global" as g;
+
+/*!
+page > case > case-detail
+
+------------------------------
+*/
+
+.case-detail-title {
+  font-size: 20rem;
+  line-height: 1;
+
+  @include g.mq() {
+    font-size: 24rem;
+  }
+}
+
+.case-detail-category {
+  font-size: 14rem;
+  color: var(--color-font-light);
+  letter-spacing: 0.075em;
+  margin-top: 8rem;
+  line-height: 1;
+
+  @include g.mq() {
+    margin-top: 10rem;
+  }
+}
+
+.case-detail-img {
+  margin-top: 14rem;
+
+  @include g.mq() {
+    margin-top: 40rem;
+  }
+
+  img {
+    border-radius: 12rem;
+
+    @include g.mq() {
+      border-radius: 14rem;
+    }
+  }
+}
+
+.case-detail-text-wrap {
+  margin-top: 40rem;
+}
+
+.case-detail-text {
+  @include g.mq() {
+    font-size: 16rem;
+  }
+
+  span {
+    display: block;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 16rem;
+  }
+}
+
+.case-detail-button {
+  margin-top: 40rem;
+  display: flex;
+  justify-content: center;
+
+  @include g.mq() {
+    margin-top: 48rem;
+  }
+}

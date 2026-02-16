@@ -29,8 +29,6 @@ component > title
 }
 
 .c-title--white {
-background-color: var(--color-font-base);
-
   &::before {
     background-color: var(--color-white);
   }

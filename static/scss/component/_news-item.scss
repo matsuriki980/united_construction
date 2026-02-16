@@ -4,8 +4,6 @@
 component > news-item
 ------------------------------
 */
-.c-news-item {
-}
 
 .c-news-item-link {
   padding: 16rem 10rem;
@@ -44,6 +42,7 @@ component > news-item
   font-size: 13rem;
   color: var(--color-font-light);
   font-family: var(--font-family-en);
+  line-height: 1;
 
   @include g.mq() {
     font-size: 14rem;
@@ -53,6 +52,7 @@ component > news-item
 .c-news-item-category {
   font-size: 12rem;
   color: var(--color-primary);
+  line-height: 1;
 }
 
 .c-news-item-title {

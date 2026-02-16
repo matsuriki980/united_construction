@@ -3,3 +3,86 @@
 /*!
 page > top > top-about
 ------------------------------ */
+.top-about {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28rem;
+
+  @include g.mq() {
+    grid-template-columns: 50% 1fr;
+    gap: 59rem;
+  }
+}
+
+.top-abput-content {
+  padding: 0 20rem;
+
+  @include g.mq() {
+    padding: 0 0 0 83rem;
+    margin-top: 40rem;
+  }
+}
+
+.top-about-massage-ja {
+  line-height: 1.6;
+  font-size: 28rem;
+  margin-top: 16rem;
+
+  @include g.mq() {
+    font-size: 34rem;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.top-about-message-en {
+  margin-top: 8rem;
+  font-size: 15rem;
+  color: var(--color-primary);
+  font-family: var(--font-family-en);
+
+  @include g.mq() {
+    font-size: 16rem;
+  }
+}
+
+.top-about-text {
+  margin-top: 24rem;
+  line-height: 2.2;
+
+  @include g.mq() {
+    margin-top: 32rem;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.top-about-button {
+  margin-top: 14rem;
+  display: flex;
+  justify-content: flex-end;
+
+  @include g.mq() {
+    margin-top: 40rem;
+  }
+}
+
+.top-about-img {
+  padding-left: 20rem;
+
+  @include g.mq() {
+    padding-left: 0;
+  }
+
+  img {
+    border-radius: 10rem 0 10rem 0;
+
+    @include g.mq() {
+      border-radius: 20rem 0 20rem 0;
+    }
+  }
+}

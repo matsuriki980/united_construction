@@ -1,0 +1,37 @@
+@use "../global" as g;
+
+/*!
+component > tab-list
+------------------------------
+*/
+.c-tab-list {
+  display: flex;
+  justify-content: center;
+  gap: 24rem;
+
+  @include g.mq() {
+    gap: 40rem;
+  }
+}
+
+.c-tab-item {
+  a {
+    color: var(--color-font-light);
+
+    @include g.mq() {
+      font-size: 16rem;
+    }
+  }
+
+  &:nth-of-type(1) {
+    a {
+      text-transform: capitalize;
+    }
+  }
+
+  &--current {
+    a {
+      color: var(--color-primary);
+    }
+  }
+}

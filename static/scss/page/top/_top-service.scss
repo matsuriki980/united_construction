@@ -4,3 +4,124 @@
 page > top > top-service
 ------------------------------
 */
+.top-service {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40rem;
+  position: relative;
+  padding-block: 64rem;
+
+  @include g.mq() {
+    grid-template-columns: 1fr 714rem;
+    grid-template-rows: auto 1fr;
+    gap: 65rem;
+    padding-top: 64rem;
+    padding-bottom: 96rem;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height: 500rem;
+    width: 355rem;
+    position: absolute;
+    z-index: var(--z-index-negative);
+    top: 0;
+    left: 0;
+    background-color: var(--color-primary);
+    border-radius: 0 0 30rem 0;
+
+    @include g.mq() {
+      width: 1366rem;
+      height: 410rem;
+    }
+  }
+}
+
+.top-service-text-wrap {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.top-service-text {
+  color: var(--color-white);
+  margin-top: 40rem;
+  padding-right: 20rem;
+
+  @include g.mq() {
+    padding-right: 0;
+    font-size: 16rem;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.top-service-list {
+  padding-right: 20rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40rem;
+
+  @include g.mq() {
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+}
+
+.top-service-item-img {
+  border-radius: 10rem;
+  overflow: hidden;
+
+  img {
+    transition: scale 0.3s;
+  }
+}
+
+.top-service-item-ja {
+  font-size: 22rem;
+  margin-top: 16rem;
+}
+
+.top-service-item-en {
+  font-family: var(--font-family-en);
+  font-size: 15rem;
+  color: var(--color-primary);
+  margin-top: 2rem;
+}
+
+.top-service-item-text {
+  margin-top: 16rem;
+
+  @include g.mq() {
+    font-size: 16rem;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.top-service-button {
+  display: flex;
+  justify-content: center;
+
+  @include g.mq() {
+    display: block;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    a {
+      color: var(--color-white);
+
+      &::after {
+        background-color: var(--color-primary);
+        border: calc((var(--size) - var(--dot-size)) / 2) solid
+          var(--color-white);
+      }
+    }
+  }
+}

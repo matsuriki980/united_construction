@@ -4,3 +4,59 @@
 page > about > about-philosophy
 ------------------------------
 */
+
+.about-philosophy-list {
+  margin-top: 48rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24rem;
+  padding-inline: 17.5rem;
+
+  @include g.mq() {
+    margin-top: 64rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40rem;
+    padding-inline: 32rem;
+  }
+}
+
+.about-philosophy-item {
+  background-color: var(--color-bg-extra-light);
+  width: 300rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16rem;
+  text-align: center;
+
+  @include g.mq() {
+    width: 352rem;
+    align-items: center; 
+  }
+}
+
+.about-philosophy-item-title {
+  font-size: 23rem;
+  color: var(--color-primary);
+  text-transform: capitalize;
+  font-family: var(--font-family-en);
+}
+
+.about-philosophy-item-text {
+  font-size: 22rem;
+
+  span {
+    display: block;
+  }
+}
+
+.about-philosophy-item-text02 {
+  font-size: 14rem;
+  color: var(--color-font-light);
+
+  span {
+    display: block;
+  }
+}

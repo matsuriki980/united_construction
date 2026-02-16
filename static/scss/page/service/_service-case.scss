@@ -4,3 +4,17 @@
 page > service > service-case
 ------------------------------
 */
+.service-case {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40rem;
+
+  @include g.mq() {
+    gap: 54rem;
+  }
+}
+
+.service-case-button {
+  display: flex;
+  justify-content: center;
+}

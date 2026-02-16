@@ -1,0 +1,57 @@
+@use "../global" as g;
+
+/*!
+component > case-item
+------------------------------
+*/
+.c-case-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40rem;
+
+  @include g.mq() {
+    gap: 39rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.c-case-item {
+  a {
+    @media (any-hover: hover) {
+      &:hover {
+        .c-case-item-img {
+          img {
+            scale: 1.03;
+          }
+        }
+      }
+    }
+  }
+}
+
+.c-case-item-img {
+  overflow: hidden;
+  border-radius: 10rem;
+
+  @include g.mq() {
+    border-radius: 12rem;
+  }
+
+  img {
+    transition: scale 0.3s;
+  }
+}
+
+.c-case-item-category {
+  font-size: 14rem;
+  color: var(--color-font-light);
+  letter-spacing: 0.075em;
+  margin-top: 14rem;
+  line-height: 1;
+}
+
+.c-case-item-title {
+  font-size: 18rem;
+  margin-top: 8rem;
+  line-height: 1;
+}
