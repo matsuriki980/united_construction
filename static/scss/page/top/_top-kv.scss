@@ -7,7 +7,7 @@ page > top > top-kv
 .top-kv {
   display: flex;
   align-items: flex-end;
-  background-image: url(/img/top/top-kv-sp.jpg);
+  background-image: url(../img/top/top-kv-sp.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -15,7 +15,7 @@ page > top > top-kv
   position: relative;
 
   @include g.mq() {
-    background-image: url(/img/top/top-kv.jpg);
+    background-image: url(../img/top/top-kv.jpg);
     height: 769rem;
   }
 
@@ -93,7 +93,7 @@ page > top > top-kv
     &::before {
       content: "";
       display: block;
-      background-image: url(/img/top/curve.svg);
+      background-image: url(../img/top/curve.svg);
       background-size: cover;
       background-position: center;
       width: 46rem;

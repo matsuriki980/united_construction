@@ -31,12 +31,15 @@
 </head>
 
 <body>
-    <header class="l-header">
-        <h1 class="l-header-logo">
+    <header class="l-header l-header--top js-header">
+        <h1 class="l-header-logo u-logo-hover">
             <a href="index.html">
-                <img width="251" height="46" src="img/logo(white).png" alt="UNITED CONSTRUCTION 建築サービス"
-                    decoding="async">
-            </a>
+                <img width="251" height="46" src="img/logo(white).png" alt="UNITED CONSTRUCTION 建築サービス" decoding="async"
+                    class="l-header-logo-white">
+                <a href="index.html">
+                    <img width="251" height="46" src="img/logo.png" alt="UNITED CONSTRUCTION 建築サービス"
+                        decoding="async" class="l-header-logo-black">
+                </a>
         </h1>
 
         <dialog class="l-header-menu js-header-menu" aria-label="ナビメニュー">
@@ -53,31 +56,32 @@
                         </a>
                     </li>
                     <li class="l-header-menu-item">
-                        <a href="about.html" class="l-header-menu-link l-header-menu-link--white">
+                        <a href="about.html" class="l-header-menu-link l-header-menu-link--white u-text-hover">
                             <span class="l-header-menu-text-en">about</span>
                             <span class="l-header-menu-text-ja">私たちについて</span>
                         </a>
                     </li>
                     <li class="l-header-menu-item">
-                        <a href="service.html" class="l-header-menu-link l-header-menu-link--white">
+                        <a href="service.html" class="l-header-menu-link l-header-menu-link--white u-text-hover">
                             <span class="l-header-menu-text-en">service</span>
                             <span class="l-header-menu-text-ja">サービス</span>
                         </a>
                     </li>
                     <li class="l-header-menu-item">
-                        <a href="news.html" class="l-header-menu-link l-header-menu-link--white">
+                        <a href="news.html" class="l-header-menu-link l-header-menu-link--white u-text-hover">
                             <span class="l-header-menu-text-en">news</span>
                             <span class="l-header-menu-text-ja">お知らせ</span>
                         </a>
                     </li>
                     <li class="l-header-menu-item">
-                        <a href="recruit.html" class="l-header-menu-link l-header-menu-link--white">
+                        <a href="recruit.html" class="l-header-menu-link l-header-menu-link--white u-text-hover">
                             <span class="l-header-menu-text-en">recruit</span>
                             <span class="l-header-menu-text-ja">採用情報</span>
                         </a>
                     </li>
                     <li class="l-header-menu-item">
-                        <a href="contact.html" class="l-header-menu-link l-header-menu-link--contact l-header-menu-link--white">
+                        <a href="contact.html"
+                            class="l-header-menu-link l-header-menu-link--contact l-header-menu-link--white">
                             <span class="l-header-menu-text-en">contact</span>
                             <span class="l-header-menu-text-ja">お問い合わせ</span>
                         </a>
@@ -92,7 +96,7 @@
     </header>
 
     <main>
-        <div class="top-kv">
+        <div class="top-kv js-header-trigger">
             <div class="top-kv-text l-container">
                 <p class="top-kv-text-en">
                     <span>Creating the future</span>
@@ -144,8 +148,8 @@
             </div>
             <div class="top-about-img">
                 <picture>
-                    <source srcset="/img/top/top-about.jpg" media="(min-width:900px)">
-                    <img src="/img/top/top-about-sp.jpg" alt="現場調査を行う、2人の男性作業員" decoding="async" width="355"
+                    <source srcset="img/top/top-about.jpg" media="(min-width:900px)">
+                    <img src="img/top/top-about-sp.jpg" alt="現場調査を行う、2人の男性作業員" decoding="async" width="355"
                         height="237">
                 </picture>
             </div>
@@ -168,8 +172,8 @@
                 <article class="top-service-item">
                     <div class="top-service-item-img">
                         <picture>
-                            <source srcset="/img/top/top-services01.jpg" media="(min-width:900px)">
-                            <img src="/img/top/top-services01-sp.jpg" alt="新築の紺と白のモダンな家" decoding="async" width="316"
+                            <source srcset="img/top/top-services01.jpg" media="(min-width:900px)">
+                            <img src="img/top/top-services01-sp.jpg" alt="新築の紺と白のモダンな家" decoding="async" width="316"
                                 height="251">
                         </picture>
                     </div>
@@ -184,8 +188,8 @@
                 <article class="top-service-item">
                     <div class="top-service-item-img">
                         <picture>
-                            <source srcset="/img/top/top-services02.jpg" media="(min-width:900px)">
-                            <img src="/img/top/top-services02-sp.jpg" alt="改装工事中の家の中の様子" decoding="async" width="316"
+                            <source srcset="img/top/top-services02.jpg" media="(min-width:900px)">
+                            <img src="img/top/top-services02-sp.jpg" alt="改装工事中の家の中の様子" decoding="async" width="316"
                                 height="251">
                         </picture>
                     </div>
@@ -209,8 +213,8 @@
         <section class="top-recruit u-pb">
             <div class="top-recruit-img">
                 <picture>
-                    <source srcset="/img/top/top-recruit.jpg" media="(min-width:900px)">
-                    <img src="/img/top/top-recruit-sp.jpg" alt="広い青空と、ビルが集まっている都市" decoding="async" width="375"
+                    <source srcset="img/top/top-recruit.jpg" media="(min-width:900px)">
+                    <img src="img/top/top-recruit-sp.jpg" alt="広い青空と、ビルが集まっている都市" decoding="async" width="375"
                         height="200">
                 </picture>
 
@@ -308,7 +312,7 @@
     </main>
 
     <footer class="l-footer">
-        <div class="l-footer-logo">
+        <div class="l-footer-logo u-logo-hover">
             <a href="index.html">
                 <img width="251" height="46" src="img/logo(white).png" alt="UNITED CONSTRUCTION 建築サービス"
                     decoding="async">
@@ -329,17 +333,17 @@
         </div>
 
         <ul class="l-footer-menu-list">
-            <li class="l-footer-menu-item"><a href="about.html">about</a></li>
-            <li class="l-footer-menu-item"><a href="service.html">service</a></li>
-            <li class="l-footer-menu-item"><a href="news.html">news</a></li>
-            <li class="l-footer-menu-item"><a href="recruit.html">recruit</a></li>
+            <li class="l-footer-menu-item"><a href="about.html" class="u-text-hover">about</a></li>
+            <li class="l-footer-menu-item"><a href="service.html" class="u-text-hover">service</a></li>
+            <li class="l-footer-menu-item"><a href="news.html" class="u-text-hover">news</a></li>
+            <li class="l-footer-menu-item"><a href="recruit.html" class="u-text-hover">recruit</a></li>
             <li class="l-footer-menu-item l-footer-item--contact"><a href="contact.html">contact</a></li>
         </ul>
 
         <div class="l-footer-legal">
             <ul class="l-footer-legal-list">
-                <li class="l-footer-lega-item"><a href="#">Company</a></li>
-                <li class="l-footer-lega-item"><a href="#">Privacy Policy</a></li>
+                <li class="l-footer-lega-item"><a href="#" class="u-text-hover">Company</a></li>
+                <li class="l-footer-lega-item"><a href="#" class="u-text-hover">Privacy Policy</a></li>
             </ul>
 
             <small class="l-footer-copyright">2025 株式会社 UNITED CONSTRUCTION</small>

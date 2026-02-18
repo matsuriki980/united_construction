@@ -8,11 +8,53 @@ export const initializeHamburgerMenu = () => {
 
   if (!menu || !closeButton || !openButton) return;
 
-  openButton.addEventListener("click", () => {
+  const openMenu = () => {
+    document.body.style.overflow = "hidden";
     menu.showModal();
+    gsap.fromTo(
+      menu,
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 0.3,
+        ease: "power2.out",
+      },
+    );
+  };
+
+  const closeMenu = () => {
+    gsap.to(menu, {
+      opacity: 0,
+      duration: 0.3,
+      ease: "power2.out",
+      onComplete: () => {
+        document.body.style.overflow = "";
+        menu.close();
+      },
+    });
+  };
+
+  openButton.addEventListener("click", () => {
+    openMenu();
   });
 
   closeButton.addEventListener("click", () => {
-    menu.close();
+    closeMenu();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeMenu();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 900) {
+      menu.close();
+      document.body.style.overflow = "";
+    }
   });
 };

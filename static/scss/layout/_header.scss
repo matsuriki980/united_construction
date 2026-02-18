@@ -15,9 +15,31 @@ layout > header
   width: 100%;
   padding: 20rem 12rem;
   z-index: var(--z-index-header);
+  background-color: rgba(255, 255, 255, 0);
 
   @include g.mq() {
     padding: 24rem 65rem;
+  }
+}
+
+.l-header--top {
+  .l-header-logo-black {
+    display: none;
+  }
+
+  &.is-active {
+    .l-header-logo-white {
+      display: none;
+    }
+    .l-header-logo-black {
+      display: block;
+    }
+
+    .l-header-menu-link:not(.l-header-menu-link--contact) {
+      @include g.mq() {
+        color: var(--color-font-base);
+      }
+    }
   }
 }
 
@@ -84,6 +106,10 @@ layout > header
 
 .l-header-menu-link {
   display: block;
+}
+
+.l-header-menu--current {
+  color: var(--color-primary);
 }
 
 .l-header-menu-link--contact {

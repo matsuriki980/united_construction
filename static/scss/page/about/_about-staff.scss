@@ -48,29 +48,18 @@ page > about > about-staff
 
 .about-member-slider {
   margin-top: 40rem;
-  margin-left: 20rem;
 
   @include g.mq() {
     margin-top: 64rem;
-    margin-left: 0;
-  }
-}
-
-.about-member-list {
-  overflow: hidden;
-
-  ul {
-    display: flex;
-    gap: 32rem;
-
-    @include g.mq() {
-      gap: 40rem;
-    }
   }
 }
 
 .about-member-item {
-  width: 285rem;
+  width: 230rem;
+
+  @include g.mq() {
+    width: 285rem;
+  }
 }
 
 .about-member-img {
